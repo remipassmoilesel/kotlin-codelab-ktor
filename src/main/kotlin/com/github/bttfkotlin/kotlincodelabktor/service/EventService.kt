@@ -223,7 +223,8 @@ object EventService {
                 ),
                 Event(
                         date = "1985",
-                        title = "first time travel"
+                        title = "first time travel",
+                        description = ""
                 ),
                 Event(
                         date = "",
