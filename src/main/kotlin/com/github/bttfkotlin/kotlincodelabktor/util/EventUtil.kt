@@ -10,6 +10,6 @@ object EventUtil {
     )
 
     fun prettier(events: List<Event>): List<Event> {
-        return events.filter { event -> event.date.isNotEmpty() }
+        return events.filter { it.date.trim().isNotEmpty() }
     }
 }
