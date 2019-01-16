@@ -11,5 +11,12 @@ object EventUtil {
 
     fun prettier(events: List<Event>): List<Event> {
         return events
+                .filter { it.date.isNotBlank() }
+                .map { it.copy(date = dateToDateString(it.date)) }
     }
+
+    fun dateToDateString(date: String): String = date
+            .map { it.toString().toInt() }
+            .map { unitsString[it] }.joinToString(" ")
+
 }
